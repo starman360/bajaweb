@@ -1,0 +1,16 @@
+/*
+Baja Website
+By Anmol Modur
+style.css
+
+Stylesheet for webpages centeral
+*/
+
+@font-face {
+    font-family: SanFrancisco;
+    src: url(SanFrancisco.ttf);
+}
+
+@import url("style_lg.css"); /*evaluates large display first*/
+@import url("style_md.css"); /*evaluates medium display second*/
+@import url("style_sm.css"); /*evaluates small display last*/
