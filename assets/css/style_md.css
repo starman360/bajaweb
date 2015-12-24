@@ -1,0 +1,58 @@
+/*
+Baja Website
+By Anmol Modur
+style_md.css
+*/
+
+@media (max-width: 1380px) {
+    /*For screens under 1366*768*/
+    
+    /*START NAV*/
+	.navbar {
+		border-radius: 0px;
+        height: 75px;
+	}
+    
+    nav{
+        font-size: 20px;
+    }
+
+    .nav{
+        float: right;
+    }
+    .nav li a {
+        height: 75px;
+        padding: 28px 15px;
+    }
+    
+    .navbar-brand {
+        padding: 7.5px 15px;
+        /*margin: 7.5px 15px;*/
+    }
+
+    #logo {
+        width: 74px;
+        height: 60px;
+    }
+    /*END NAV*/
+    /*START MAIN*/
+    #wrapper {
+        width: 100%;
+        height: 3000px;
+        padding-top: 75px;
+    }
+    /*START PAGES*/
+    div.page{
+        border: 0;
+        padding: 0;
+        margin: 0;
+        min-height: 522px;
+        width: 100%;
+        background-color: blue;
+    }
+    
+    
+    
+    /*END PAGES*/
+    /*END MAIN*/
+}
