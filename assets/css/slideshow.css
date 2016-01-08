@@ -1,4 +1,4 @@
-ul.cb-slideshow {z-index: 0;}
+ul.cb-slideshow {z-index: -1;}
 .cb-slideshow,
 .cb-slideshow:after { 
     list-style-type: none;
@@ -7,7 +7,7 @@ ul.cb-slideshow {z-index: 0;}
     height: 100%;
     top: 0px;
     left: 0px;
-    z-index: 0; 
+    z-index: -1; 
 }
 .cb-slideshow li span { 
     width: 100%;
@@ -20,7 +20,7 @@ ul.cb-slideshow {z-index: 0;}
     background-position: 50% 50%;
     background-repeat: none;
     opacity: 0;
-    z-index: 0;
+    z-index: -1;
     -webkit-backface-visibility: hidden;
     -webkit-animation: imageAnimation 36s linear infinite 0s;
     -moz-animation: imageAnimation 36s linear infinite 0s;

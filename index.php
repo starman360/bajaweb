@@ -33,15 +33,24 @@ require($ASSET_PATH."/header.php");
 		<li><div class="layer"><a href="">2012</a></div></li>
 	</ul>
 </div>
-<div id="results" class="page">
-	<!-- <h1>results</h1>
+<div id="results" class="page"></div>
+<div id="sponsors" class="page">
+	<h1>Sponsors <br>& Donate</h1>
 	<ul class="buton">
-		<li id="five"></li>
-		<li><a href="#" id="2014">2014 Season</a></li>
-		<li><a href="#" id="2013">2014 Season</a></li>
-		<li><a href="#" id="2012">2013 Season</a></li>
-	</ul> -->
+		<li><a>Current Sponsors</a></li>
+	</ul>
+	<p>Click below to learn more about becoming a sponsor of our team.</p>
+	<ul class="buton">
+		<li><a>Brochure</a></li>
+		<li><a>Proposal</a></li>
+	</ul>
 </div>
-<div id="sponsors" class="page">&nbsp;</div>
+<div id="media" class="page">
+	<div>
+		<span class="glyph email" aria-hidden="true"></span>
+		<span class="glyph facebook" aria-hidden="true"></span>
+		<span class="glyph twitter" aria-hidden="true"></span>
+	</div>
+</div>
 <!-- Exit Wrapper -->
 <?php require($ASSET_PATH."/footer.php");?>

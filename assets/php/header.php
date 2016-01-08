@@ -26,4 +26,4 @@ $ASSET_PATH = $_SERVER['DOCUMENT_ROOT']."/assets/php";
             <li><span></span></li>
         </ul>
         <div id="wrapper">
-            <?php include($ASSET_PATH."/nav.php");?>
+        <?php include($ASSET_PATH."/nav.php");?>

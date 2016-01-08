@@ -1,14 +1,3 @@
-$(window).on("hashchange", function() {
-    if (location.hash.length !== 0) {
-        if ($(document).width() <= 768) {
-            window.scrollTo(window.scrollX, window.scrollY - 50);
-        } else {
-            window.scrollTo(window.scrollX, window.scrollY - 75);
-        }
-        // console.log($(document).width());
-    }
-});
-
 function thumbResize() {
     var thumb = $("ul.thumbnail li");
     var width = thumb.width();
@@ -21,30 +10,90 @@ function resultsDef() {
     $("#results").load("assets/php/results_menu.php");
 }
 
+function media() {
+	var spacing = $("#spons").height();
+    $("#media").css("margin-bottom", spacing);
+}
+
 $(document).ready(function() {
     thumbResize();
     resultsDef();
-	$(document.body).click("#2015", function() {
-	    $("#results").load("assets/php/results_2015.php");
-	    console.log("loaded successfully");
-	});
-	$("#2014").click(function() {
-   		$("#results").load("assets/php/results_2014.php");
-	    return false;
-	});
+    media();
+    $("#results").on("click", "#2015", function() {
+        $("#15").animate({
+            bottom: '50px'
+        }, 1000, function() {
+            $("#results").load("assets/php/results_2015.php");
+        });
+    });
 
-	$("#2013").click(function() {
-	    $("#results").load("assets/php/results_2013.php");
-	    return false;
-	});
+    $("#results").on("click", "#2014", function() {
+    	$("#14").animate({
+            bottom: '115px'
+        }, 1000, function() {
+        $("#results").load("assets/php/results_2014.php");
+        });
+    });
 
-	$("#2012").click(function() {
-	    $("#results").load("assets/php/results_2012.php");
-	    return false;
-	});
+    $("#results").on("click", "#2013", function() {
+    	$("#13").animate({
+            bottom: '180px'
+        }, 1000, function() {
+        $("#results").load("assets/php/results_2013.php");
+        });
+    });
 
-	$("#MENU").click(function() {
-	    $("#results").load("assets/php/results_menu.php");
-	    return false;
-	});
+    $("#results").on("click", "#2012", function() {
+    	$("#12").animate({
+            bottom: '245px'
+        }, 1000, function() {
+        $("#results").load("assets/php/results_2012.php");
+        });
+    });
+
+    $("#results").on("click", ".MENU", function() {
+    	$("#15").animate({
+            top: '50px'
+        }, 1000, function() {
+            $("#results").load("assets/php/results_menu.php");
+        });
+        $("#14").animate({
+            top: '115px'
+        }, 1000, function() {
+            $("#results").load("assets/php/results_menu.php");
+        });
+        $("#13").animate({
+            top: '180px'
+        }, 1000, function() {
+            $("#results").load("assets/php/results_menu.php");
+        });
+        $("#12").animate({
+            top: '245px'
+        }, 1000, function() {
+            $("#results").load("assets/php/results_menu.php");
+        });
+    });
+
+    $('a[href*=#]:not([href=#])').click(function() {
+        if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
+            var target = $(this.hash);
+            target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+            if (target.length) {
+                if ($(document).width() <= 768) {
+                    $('html,body').animate({
+                        scrollTop: target.offset().top - 50
+                    }, 500);
+                } else {
+                    $('html,body').animate({
+                        scrollTop: target.offset().top - 75
+                    }, 500);
+                }
+                return false;
+            }
+        }
+    });
+
+    $("#wrapper a").on("click", function(event) {
+        $(".navbar-collapse").collapse('hide');
+    });
 });
