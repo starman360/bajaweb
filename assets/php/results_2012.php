@@ -3,5 +3,5 @@
 ?>
 <h1 id="thin"></h1>
 <ul class="buton">
-	<li class="MENU" id="12"><a><span class="glyphicon glyphicon-menu-left" aria-hidden="true"></span></a><a>2012 Season</a></li>
+	<li class="MENU" id="12"><span class="glyphicon glyphicon-menu-left" aria-hidden="true"></span><span>2012 Season</span></li>
 </ul>

@@ -17,13 +17,5 @@ $ASSET_PATH = $_SERVER['DOCUMENT_ROOT']."/assets/php";
         <link href="assets/css/slideshow.css" rel="stylesheet">
     </head>
     <body>
-        <ul class="cb-slideshow">
-            <li><span></span></li>
-            <li><span></span></li>
-            <li><span></span></li>
-            <li><span></span></li>
-            <li><span></span></li>
-            <li><span></span></li>
-        </ul>
         <div id="wrapper">
         <?php include($ASSET_PATH."/nav.php");?>

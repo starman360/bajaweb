@@ -1,7 +1,7 @@
 <?php
 //footer.php
 ?>
-			<div id="spons"><img src="/assets/images/sponsors-05.png" width="100%" alt=""></div>
+			<div id="spons"><img src="/assets/images/sponsors.png" width="100%" alt="Platinum Sponsors"></div>
 		</div>
     	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>

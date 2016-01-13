@@ -4,7 +4,7 @@ $result = 0;
 require($ASSET_PATH."/header.php");
 ?>
 <!-- Enter Wrapper -->
-<div id="main" class="page">
+<div id="main" class="page slideshow">
 </div>
 <div id="about" class="page">
 	<h1>ABOUT</h1>
@@ -18,38 +18,39 @@ require($ASSET_PATH."/header.php");
 </div>
 <div id="team" class="page">
 	<h1>Team</h1>
-	<img src="" alt="Imagine RIT">
+	<img src="assets/images/Rock_Crawl_2.jpg" alt="Imagine RIT">
 	<ul class="buton">
-		<li><a href="">executive board</a></li>
-		<li><a href="">design team</a></li>
+		<li><span>executive board</span></li>
+		<li><span>design team</span></li>
 	</ul>
 </div>
 <div id="gallery" class="page">
 	<h1>Gallery</h1>
 	<ul class="thumbnail">
-		<li><div class="layer"><a href="">2015</a></div></li>
-		<li><div class="layer"><a href="">2014</a></div></li>
-		<li><div class="layer"><a href="">2013</a></div></li>
-		<li><div class="layer"><a href="">2012</a></div></li>
+		<li><div class="layer"><span>2015</span></div></li>
+		<li><div class="layer"><span>2014</span></div></li>
+		<li><div class="layer"><span>2013</span></div></li>
+		<li><div class="layer"><span>2012</span></div></li>
 	</ul>
 </div>
 <div id="results" class="page"></div>
 <div id="sponsors" class="page">
 	<h1>Sponsors <br>& Donate</h1>
 	<ul class="buton">
-		<li><a>Current Sponsors</a></li>
+		<li><span id="sponsortoggle">Current Sponsors</span></li>
+		<li id="sponsorpage"></li>
 	</ul>
 	<p>Click below to learn more about becoming a sponsor of our team.</p>
 	<ul class="buton">
-		<li><a>Brochure</a></li>
-		<li><a>Proposal</a></li>
+		<li><span>Brochure</span></li>
+		<li><span>Proposal</span></li>
 	</ul>
 </div>
 <div id="media" class="page">
 	<div>
-		<span class="glyph email" aria-hidden="true"></span>
-		<span class="glyph facebook" aria-hidden="true"></span>
-		<span class="glyph twitter" aria-hidden="true"></span>
+		<a href=""><span class="glyph email" aria-hidden="true"></span></a>
+		<a href="https://www.facebook.com/RIT-Baja-SAE-208643804377/"><span class="glyph facebook" aria-hidden="true"></span></a>
+		<a><span class="glyph twitter" aria-hidden="true"></span></a>
 	</div>
 </div>
 <!-- Exit Wrapper -->

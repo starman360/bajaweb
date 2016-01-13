@@ -8,19 +8,37 @@ style_sm.css
 /*INITIALIZE FONTS*/
 
 @font-face {
-    font-family: "San_Fransisco";
-    src: url("../fonts/San_Francisco.ttf");
+    font-family: "Quicksand";
+    src: url(/assets/fonts/Quicksand-Regular.otf);
 }
-
 @font-face {
-    font-family: "San Fransisco";
-    src: url("../fonts/San_Francisco_Bold.ttf");
+    font-family: "Quicksand";
+    src: url(/assets/fonts/Quicksand-Bold.otf);
     font-weight: bold;
 }
+@font-face {
+    font-family: "Quicksand";
+    src: url(/assets/fonts/Quicksand-Light.otf);
+    font-weight: lighter;
+}
 
 @font-face {
-    font-family: "San Fransisco";
-    src: url("../fonts/San_Francisco_Thin.ttf");
+    font-family: "Raleway";
+    src: url(/assets/fonts/Raleway-Regular.ttf);
+}
+@font-face {
+    font-family: "Raleway";
+    src: url(/assets/fonts/Raleway-Bold.ttf);
+    font-weight: bold;
+}
+@font-face {
+    font-family: "Raleway";
+    src: url(/assets/fonts/Raleway-Black.ttf);
+    font-weight: bolder;
+}
+@font-face {
+    font-family: "Raleway";
+    src: url(/assets/fonts/Raleway-Light.ttf);
     font-weight: lighter;
 }
 
@@ -61,7 +79,6 @@ style_sm.css
     -webkit-border-radius: 10px;
     border-radius: 10px;
 }
-
 
 /* Handle */
 
@@ -192,7 +209,6 @@ ul.buton li {
     text-transform: uppercase;
     background-color: orange;
     font-size: 2em;
-    padding: 6px 5px;
     margin: 12.5px;
 }
 
@@ -202,20 +218,29 @@ ul.buton li a {
     color: white;
 }
 
+ul.buton li span {
+	text-decoration: none;
+    display: block;
+    color: white;
+}
+
+ul.buton li span:last-of-type {
+	width: 100%;
+	top: 8px;
+}
+
 ul.buton li:hover {
     box-shadow: 0px 0px 20px #888888;
     cursor: pointer;
 }
 
-ul.buton li span + a {
-    display: inline-block;
+ul.buton li span + span {
+    /*display: inline-block;*/
 }
 
 ul.buton li span {
-    /*float:left;*/
     position: absolute;
     top: 11px;
-    left: 11px;
 }
 
 
@@ -254,13 +279,18 @@ ul.thumbnail li {
     height: 100%;
 }
 
-ul.thumbnail li a {
+ul.thumbnail li span {
+	cursor: pointer;
     text-decoration: none;
     display: block;
     color: black;
     font-size: 1.3em;
-    padding-top: 17%;
-    height: 100%;
+    /*padding-top: 17%;*/
+    /*height: 100%;*/
+}
+
+ul.thumbnail li:hover {
+    box-shadow: 0px 0px 30px #888888;
 }
 /*END GALLERY*/
 /*START RESULTS*/
@@ -270,11 +300,23 @@ ul.thumbnail li a {
     padding-top: 15px;
 }
 
+
 /*END RESULTS*/
+/*START SPONSORS*/
+
+#sponsorpage {
+	background-image: url(/assets/images/sponsorspage.png);
+	background-size: 100% auto;
+	background-color: black;
+	display: none;
+}
+
+/*END SPONSORS*/
 /*START MEDIA*/
 
 #media div {
 	width: 130px;
+	height: 40px;
 	margin: 0 auto;
 	/*background-color: white;*/
 }
@@ -286,6 +328,7 @@ h1 {
     font-weight: bolder;
     padding-top: 30px;
     text-transform: uppercase;
+    font-family: "Raleway";
 }
 
 h2 {
@@ -293,6 +336,8 @@ h2 {
     letter-spacing: 5px;
     text-align: center;
     margin-bottom: 0px;
+    font-family: "Raleway";
+    font-weight: normal;
 }
 
 h2 ~ p {
@@ -302,6 +347,7 @@ h2 ~ p {
 
 p {
     padding: 0px 15px;
+    font-family: "Quicksand";
 }
 
 p > a {
