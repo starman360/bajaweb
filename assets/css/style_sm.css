@@ -11,11 +11,13 @@ style_sm.css
     font-family: "Quicksand";
     src: url(/assets/fonts/Quicksand-Regular.otf);
 }
+
 @font-face {
     font-family: "Quicksand";
     src: url(/assets/fonts/Quicksand-Bold.otf);
     font-weight: bold;
 }
+
 @font-face {
     font-family: "Quicksand";
     src: url(/assets/fonts/Quicksand-Light.otf);
@@ -26,42 +28,45 @@ style_sm.css
     font-family: "Raleway";
     src: url(/assets/fonts/Raleway-Regular.ttf);
 }
+
 @font-face {
     font-family: "Raleway";
     src: url(/assets/fonts/Raleway-Bold.ttf);
     font-weight: bold;
 }
+
 @font-face {
     font-family: "Raleway";
     src: url(/assets/fonts/Raleway-Black.ttf);
     font-weight: bolder;
 }
+
 @font-face {
     font-family: "Raleway";
     src: url(/assets/fonts/Raleway-Light.ttf);
     font-weight: lighter;
 }
 
-.glyph{
-	width: 40px;
-	height: 40px;
-	position: relative;
-	display: inline-block;
-	font-weight: 400;
-	line-height: 1;
-	background-size: cover;
+.glyph {
+    width: 40px;
+    height: 40px;
+    position: relative;
+    display: inline-block;
+    font-weight: 400;
+    line-height: 1;
+    background-size: cover;
 }
 
 .twitter {
     background-image: url(/assets/images/Glyphicon/twitter.png);
 }
 
-.facebook{
-	background-image: url(/assets/images/Glyphicon/facebook.png);
+.facebook {
+    background-image: url(/assets/images/Glyphicon/facebook.png);
 }
 
-.email{
-	background-image: url(/assets/images/Glyphicon/email.png);
+.email {
+    background-image: url(/assets/images/Glyphicon/email.png);
 }
 
 
@@ -80,6 +85,7 @@ style_sm.css
     border-radius: 10px;
 }
 
+
 /* Handle */
 
 ::-webkit-scrollbar-thumb {
@@ -95,6 +101,7 @@ style_sm.css
 
 body {
     width: 100%;
+    font-family: "Quicksand";
 }
 
 
@@ -106,6 +113,18 @@ body {
 
 nav {
     font-size: 20px;
+    font-family: "Raleway";
+    font-weight: bold;
+}
+
+.navbar-inverse .navbar-nav > li > a {
+	color: white;
+}
+
+.navbar-inverse .navbar-nav > li > a:hover {
+	/*color: #9d9d9d; Gray */
+	color: #f47a1f;
+
 }
 
 .navbar-header {
@@ -126,6 +145,8 @@ nav {
 
 #wrapper {
     width: 100%;
+    box-shadow: 0px 0px 40px #888888;
+
     /*height: 3000px;*/
 }
 
@@ -144,6 +165,10 @@ div.page {
     padding-bottom: 15px;
 }
 
+div.page:nth-of-type(1) {
+    margin-top: 50px;
+}
+
 div.page:nth-of-type(2n) {
     background-color: lightgray;
 }
@@ -156,13 +181,14 @@ div.page:nth-of-type(2n) {
 
 #about {
     /*height: 770px;*/
-    font-family: "San_Francisco";
+    /*font-family: "San_Francisco";*/
 }
 
 #team {}
 
 #gallery {
     /*background-color: transparent;*/
+    font-family: "Raleway";
 }
 
 #results {
@@ -170,7 +196,7 @@ div.page:nth-of-type(2n) {
 }
 
 #sponsors {
-    /*background-color: transparent;*/
+	text-align: center;
 }
 
 #media {
@@ -179,10 +205,19 @@ div.page:nth-of-type(2n) {
 }
 
 #spons {
-	background-color: black;
-	position: fixed;
-	bottom: 0px;
-	width: 100%;
+    background-color: black;
+    position: fixed;
+    bottom: 0px;
+    width: 100%;
+}
+
+#designteam {
+    height: 522px;
+}
+
+#people {
+    font-family: "Raleway";
+    text-align: center;
 }
 
 
@@ -207,40 +242,35 @@ ul.buton li {
     height: 50px;
     text-align: center;
     text-transform: uppercase;
-    background-color: orange;
+    background-color: #f47a1f;
     font-size: 2em;
     margin: 12.5px;
 }
 
 ul.buton li a {
     text-decoration: none;
-    display: block;
+    /*display: block;*/
     color: white;
 }
 
 ul.buton li span {
-	text-decoration: none;
-    display: block;
+    text-decoration: none;
+    /*display: block;*/
     color: white;
+
 }
 
 ul.buton li span:last-of-type {
-	width: 100%;
-	top: 8px;
+	font-weight: bold;
+}
+
+ul.buton li span.glyphicon {
+    left: -75px;
 }
 
 ul.buton li:hover {
     box-shadow: 0px 0px 20px #888888;
     cursor: pointer;
-}
-
-ul.buton li span + span {
-    /*display: inline-block;*/
-}
-
-ul.buton li span {
-    position: absolute;
-    top: 11px;
 }
 
 
@@ -280,7 +310,7 @@ ul.thumbnail li {
 }
 
 ul.thumbnail li span {
-	cursor: pointer;
+    cursor: pointer;
     text-decoration: none;
     display: block;
     color: black;
@@ -292,7 +322,11 @@ ul.thumbnail li span {
 ul.thumbnail li:hover {
     box-shadow: 0px 0px 30px #888888;
 }
+
+
 /*END GALLERY*/
+
+
 /*START RESULTS*/
 
 #results h1#thin {
@@ -300,44 +334,124 @@ ul.thumbnail li:hover {
     padding-top: 15px;
 }
 
+#results ul.buton li.detail {
+    display: none;
+}
+
 
 /*END RESULTS*/
+
+
 /*START SPONSORS*/
 
 #sponsorpage {
-	background-image: url(/assets/images/sponsorspage.png);
-	background-size: 100% auto;
-	background-color: black;
-	display: none;
+    background-image: url(/assets/images/sponsorspage.png);
+    background-size: 100% auto;
+    background-color: black;
+    display: none;
 }
 
+
 /*END SPONSORS*/
+
+
 /*START MEDIA*/
 
 #media div {
-	width: 130px;
-	height: 40px;
-	margin: 0 auto;
-	/*background-color: white;*/
+    width: 130px;
+    height: 40px;
+    margin: 0 auto;
+    /*background-color: white;*/
 }
+
 
 /*END MEDIA*/
 
+
+/*START DESIGNTEAM*/
+
+#designteam {}
+
+
+/*END DESIGNTEAM*/
+
+
+/*START DESCRIPTION*/
+
+#description p {
+    padding: 30px 20px;
+    text-align: justify;
+}
+
+
+/*END DESCRIPTION*/
+
+
+/*START PEOPLE*/
+
+#people ul#teammembers {
+    padding-left: 0px;
+    padding-top: 50px;
+    /*width: 100%;*/
+}
+
+#people ul.member {
+    position: relative;
+    margin: 0 auto;
+    padding: 0 80px;
+    display: inline-block;
+    padding-bottom: 30px;
+}
+
+#people ul.member:nth-of-type(3) li:nth-of-type(2) {
+    /*content: "DRIVELINE AND <br> REDUCTION";*/
+}
+
+#people ul.member li {
+    display: block;
+    list-style-type: none;
+}
+
+#people ul.member li:nth-of-type(1) {
+    border: 4px solid #f47a1f;
+    height: 184px;
+    width: 184px;
+    margin: 0 auto;
+}
+
+#people ul.member li:nth-of-type(2) {
+    color: #f47a1f;
+    font-size: 1.5em;
+    font-weight: bolder;
+    text-transform: uppercase;
+    /*width: 364px;*/
+    /*line-height: 1em;*/
+}
+
+#people ul.member li:nth-of-type(3) {
+    font-size: 1.5em;
+    font-weight: bolder;
+    line-height: .9em;
+}
+
+
+/*END PEOPLE*/
+
 h1 {
     text-align: center;
-    font-weight: bolder;
+    font-weight: bold;
     padding-top: 30px;
     text-transform: uppercase;
     font-family: "Raleway";
 }
 
 h2 {
-    color: orange;
+    color: #f47a1f;
     letter-spacing: 5px;
     text-align: center;
     margin-bottom: 0px;
     font-family: "Raleway";
-    font-weight: normal;
+    font-weight: bold;
 }
 
 h2 ~ p {
@@ -352,7 +466,7 @@ p {
 
 p > a {
     text-decoration: none;
-    color: orange;
+    color: #f47a1f;
 }
 
 .h1,

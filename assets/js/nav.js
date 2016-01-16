@@ -6,87 +6,54 @@ function thumbResize() {
     thumb.css('height', width);
 }
 
-function resultsDef() {
-    $("#results").load("assets/php/results_menu.php");
-    //For the results menu
+function resultsBehavior(year, animateDistance, detail) {
     if ($(document).width() <= 768) {
-        $("#results").on("click", "#2015", function() {
-            $("#15").animate({
-                bottom: '50px'
+        $("#results").on("click", "#" + year, function() {
+        	console.log("run " + "#" + year);
+            $("#" + year).animate({
+                bottom: '' + animateDistance
             }, 1000, function() {
-                $("#results").load("assets/php/results_2015.php");
+                $("#results").load("assets/php/results_20" + year + ".php", function() {
+                    initialize();
+                });
             });
         });
-
-        $("#results").on("click", "#2014", function() {
-            $("#14").animate({
-                bottom: '115px'
-            }, 1000, function() {
-                $("#results").load("assets/php/results_2014.php");
-            });
-        });
-
-        $("#results").on("click", "#2013", function() {
-            $("#13").animate({
-                bottom: '180px'
-            }, 1000, function() {
-                $("#results").load("assets/php/results_2013.php");
-            });
-        });
-
-        $("#results").on("click", "#2012", function() {
-            $("#12").animate({
-                bottom: '245px'
-            }, 1000, function() {
-                $("#results").load("assets/php/results_2012.php");
-            });
-        });
-
         $("#results").on("click", ".MENU", function() {
-            $("#15").animate({
-                top: '50px'
-            }, 1000, function() {
-                $("#results").load("assets/php/results_menu.php");
-            });
-            $("#14").animate({
-                top: '115px'
-            }, 1000, function() {
-                $("#results").load("assets/php/results_menu.php");
-            });
-            $("#13").animate({
-                top: '180px'
-            }, 1000, function() {
-                $("#results").load("assets/php/results_menu.php");
-            });
-            $("#12").animate({
-                top: '245px'
-            }, 1000, function() {
-                $("#results").load("assets/php/results_menu.php");
+            $("#results").load("assets/php/results_menu.php", function() {
+                initialize();
+             	return false;
             });
         });
     } else {
-    	$("#results").on("click", "#2015", function() {
-    		var target = $("#results ul li#d1");
-    		$("#results ul li.detail").slideUp();
-            target.slideToggle().load("assets/php/results_2015.php");
+        $("#results").on("click", "#" + year, function() {
+            var target = $("#results ul li#d" + detail);
+            $(this).children("span:first-of-type").toggle();
+            $(this).siblings().children("span:first-of-type").hide();
+            $("#results ul li.detail:not([data-year='" + year + "'])").slideUp();
+            target.slideToggle(function() {
+                target.load("assets/php/results_20" + year + ".php", function() {
+                    initialize();
+                });
+            });
+            target.attr('data-year', year);
         });
-        $("#results").on("click", "#2014", function() {
-    		var target = $("#results ul li#d1");
-    		$("#results ul li.detail").slideUp();
-            target.slideToggle().load("assets/php/results_2014.php");
-        });
-        $("#results").on("click", "#2013", function() {
-    		var target = $("#results ul li#d2");
-    		$("#results ul li.detail").slideUp();
-            target.slideToggle().load("assets/php/results_2013.php");
-        });
-        $("#results").on("click", "#2012", function() {
-    		var target = $("#results ul li#d2");
-    		$("#results ul li.detail").slideUp();
-            target.slideToggle().load("assets/php/results_2012.php");
-        });
-        
     }
+}
+
+function resultsDef() {
+    $("#results").load("assets/php/results_menu.php", function() {
+        initialize();
+    });
+
+    resultsBehavior(15, '50px', 1);
+    resultsBehavior(14, '115px', 1);
+    resultsBehavior(13, '180px', 2);
+    resultsBehavior(12, '245px', 2);
+    resultsBehavior(11, '310px', 3);
+    resultsBehavior(10, '375px', 3);
+    resultsBehavior('09', '440px', 4);
+    resultsBehavior('08', '505px', 4);
+    //For the results menu
 }
 
 function media() {
@@ -104,13 +71,40 @@ function sponsors() {
 
 function heightcenter() {
     var target = $(".heightcenter");
-    var width = target.width();
-    var height = target.height();
-    var pwidth = target.parent().width();
-    var pheight = target.parent().height();
-    target.css("position", "relative");
-    target.css("top", ((pheight - height) / 2));
-    target.css("left", ((pwidth - width) / 2));
+    target.each(function() {
+        var height = $(this).height();
+        var pheight = $(this).parent().height();
+        $(this).css("position", "relative");
+        $(this).css("top", ((pheight - height) / 2));
+    });
+}
+
+function widthcenter() {
+    var target = $(".widthcenter");
+    target.each(function() {
+        var width = $(this).width();
+        var pwidth = $(this).parent().width();
+        $(this).css("position", "relative");
+        $(this).css("left", ((pwidth - width) / 2));
+    });
+}
+
+function center() {
+    heightcenter();
+    widthcenter();
+}
+
+// To be run every time something is loaded
+function initialize() {
+    thumbResize();
+    media();
+
+    $(".layer span").addClass("heightcenter");
+    $("ul.buton li span").addClass("heightcenter");
+    $("ul.buton li a").addClass("heightcenter");
+
+    widthcenter();
+    heightcenter();
 }
 
 $(document).ready(function() {
@@ -120,6 +114,8 @@ $(document).ready(function() {
     sponsors();
 
     $(".layer span").addClass("heightcenter");
+    $("ul.buton li span").addClass("heightcenter");
+    $("ul.buton li a").addClass("heightcenter");
 
     //Auto Hides the menu
     $("#wrapper a").on("click", function(event) {
@@ -146,8 +142,25 @@ $(document).ready(function() {
         }
     });
 
-
-
+    $('a[href*=#]:not([href=#])').click(function(e) {
+    	e.preventDefault();
+        if (location.pathname.replace(/^\//, '') != this.pathname.replace(/^\//, '')) {
+            var target = $(this.hash);
+            console.log(target);
+            window.location = this.pathname;
+            if ($(document).width() <= 768) {
+                $('html,body').animate({
+                    scrollTop: target.offset().top - 50
+                }, 500);
+            } else {
+                $('html,body').animate({
+                    scrollTop: target.offset().top - 75
+                }, 500);
+            }
+            return false;
+        }
+    });
     // Created class heightcenter
+    widthcenter();
     heightcenter();
 });

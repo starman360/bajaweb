@@ -1,6 +1,13 @@
 <?php
 //footer.php
 ?>
+			<div id="media" class="page">
+				<div>
+					<a href=""><span class="glyph email" aria-hidden="true"></span></a>
+					<a href="https://www.facebook.com/RIT-Baja-SAE-208643804377/"><span class="glyph facebook" aria-hidden="true"></span></a>
+					<a><span class="glyph twitter" aria-hidden="true"></span></a>
+				</div>
+			</div>
 			<div id="spons"><img src="/assets/images/sponsors.png" width="100%" alt="Platinum Sponsors"></div>
 		</div>
     	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->

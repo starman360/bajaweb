@@ -11,10 +11,10 @@ $ASSET_PATH = $_SERVER['DOCUMENT_ROOT']."/assets/php";
         <!--Bootstrap Stylesheet-->
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
         <!--CSS Stylesheet-->
-        <link href="assets/css/style_sm.css" rel="stylesheet">
-        <link href="assets/css/style_md.css" rel="stylesheet">
-        <link href="assets/css/style_lg.css" rel="stylesheet">
-        <link href="assets/css/slideshow.css" rel="stylesheet">
+        <link href="/assets/css/style_sm.css" rel="stylesheet">
+        <link href="/assets/css/style_md.css" rel="stylesheet">
+        <link href="/assets/css/style_lg.css" rel="stylesheet">
+        <link href="/assets/css/slideshow.css" rel="stylesheet">
     </head>
     <body>
         <div id="wrapper">

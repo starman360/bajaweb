@@ -32,16 +32,23 @@ style_md.css
     }
     /*END NAV*/
     /*START PAGE*/
-    /*START MAIN*/
+    .page:nth-of-type(1) {
+        margin-top: 74px;
+    }
     #main {
         height: 522px;
-        margin-top: 74px;
         padding-bottom: 0px;
     }
-    /*END MAIN*/
     #team {
         max-height: 515px;
     }
+    #description {}
+    #people {
+        font-family: "Raleway";
+        text-align: left;
+    }
+    /*START MAIN*/
+    /*END MAIN*/
     /*START TEAM*/
     ul.buton li {
         margin: 0 auto;
@@ -53,13 +60,14 @@ style_md.css
         font-size: 37.1px;
         top: 14px;
     }
+    ul.buton li a {
+        font-size: 37.1px;
+        top: 14px;
+    }
     #team img {
         max-height: 400px;
     }
     #team ul.buton {
-        /*position: absolute;
-        top: 1535px;
-        left: 315px;*/
         position: relative;
         top: -281.25px;
     }
@@ -75,6 +83,7 @@ style_md.css
         width: 483px;
         height: 78px;
         display: inline-block;
+        margin: 7px;
     }
     #results ul.buton li.detail {
         width: 986px;
@@ -85,8 +94,10 @@ style_md.css
     #results ul.buton li.detail:hover {
         box-shadow: none;
     }
-
     #results ul.buton ul.buton {
+        display: none;
+    }
+    #results ul.buton li span:first-of-type {
         display: none;
     }
     /*END RESULTS*/
@@ -97,6 +108,39 @@ style_md.css
         max-width: 1000px;
     }
     /*END SPONS*/
+    /*START DESCRIPTION*/
+    #description p {
+        margin: 0 auto;
+        padding: 90px 0px;
+        width: 600px;
+        text-align: justify;
+    }
+    /*END DESCRIPTION*/
+    /*START PEOPLE*/
+    #people ul#teammembers {
+        padding-top: 80px;
+    }
+    #people ul.member {
+        margin: 0px 52px;
+        padding: 0px 15px;
+        vertical-align: top;
+        padding-bottom: 40px;
+    }
+    #people ul.member li:nth-of-type(1) {
+        height: 364px;
+        width: 364px;
+    }
+    #people ul.member li:nth-of-type(2) {
+        width: 364px;
+        line-height: 1.3em;
+    }
+    #people ul.member li:nth-of-type(3) {
+        line-height: 1.3em;
+    }
+    /*END PEOPLE*/
+    div.back {
+        margin-bottom: 100px;
+    }
     /*END PAGE*/
     p {
         font-size: 1.5em;

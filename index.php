@@ -18,10 +18,10 @@ require($ASSET_PATH."/header.php");
 </div>
 <div id="team" class="page">
 	<h1>Team</h1>
-	<img src="assets/images/Rock_Crawl_2.jpg" alt="Imagine RIT">
+	<img src=" /assets/images/Rock_Crawl_2.jpg" alt="Imagine RIT">
 	<ul class="buton">
-		<li><span>executive board</span></li>
-		<li><span>design team</span></li>
+		<li><a href="e_board.php">executive board</a></li>
+		<li><a href="design_team.php">design team</a></li>
 	</ul>
 </div>
 <div id="gallery" class="page">
@@ -45,13 +45,6 @@ require($ASSET_PATH."/header.php");
 		<li><span>Brochure</span></li>
 		<li><span>Proposal</span></li>
 	</ul>
-</div>
-<div id="media" class="page">
-	<div>
-		<a href=""><span class="glyph email" aria-hidden="true"></span></a>
-		<a href="https://www.facebook.com/RIT-Baja-SAE-208643804377/"><span class="glyph facebook" aria-hidden="true"></span></a>
-		<a><span class="glyph twitter" aria-hidden="true"></span></a>
-	</div>
 </div>
 <!-- Exit Wrapper -->
 <?php require($ASSET_PATH."/footer.php");?>
