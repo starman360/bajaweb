@@ -4,6 +4,18 @@ $result = 0;
 require($ASSET_PATH."/header.php");
 ?>
 
-
-
+<div id="gallerypage" class="page">
+	<h1>2015 gallery</h1>
+	<div id="slideshow">
+		<?php 
+			$dirname = "gallery/2015/";
+			$images = glob($dirname."*.jpg");
+			$numOfImages = 0;
+			foreach($images as $image) {
+				echo '<img src="'.$image.'" class="image"/><br />';
+				$numOfImages++;
+			}  
+		?>
+	</div>
+</div>
 <?php require($ASSET_PATH."/footer.php");?>

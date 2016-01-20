@@ -32,7 +32,7 @@ style_md.css
     }
     /*END NAV*/
     /*START PAGE*/
-    .page:nth-of-type(1) {
+    div.page:nth-of-type(1) {
         margin-top: 74px;
     }
     #main {
@@ -138,6 +138,14 @@ style_md.css
         line-height: 1.3em;
     }
     /*END PEOPLE*/
+    /*START SLIDESHOW*/
+    .image{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+    }
+
+    /*END SLIDESHOW*/
     div.back {
         margin-bottom: 100px;
     }

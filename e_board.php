@@ -4,7 +4,6 @@ $result = 0;
 require($ASSET_PATH."/header.php");
 ?>
 <div id="designteam" class="page">
-	<h1></h1>
 	<h1>Executive Board</h1>
 </div>
 <div id="description" class="page">
