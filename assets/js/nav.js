@@ -104,27 +104,42 @@ function asyncLoop(iterations, func, callback) {
 function nextslide(n) {
     return function() {
         $("#slideshow img.image:nth-of-type(" + (n - 1) + ")").show();
-        console.log("here");
+        console.log(n);
         $("#slideshow img.image:nth-of-type(" + n + ")").animate({
             opacity: 0
         }, 1000, function() {
-            $("#slideshow img.image:not(:nth-of-type(" + (n - 1) + "))").hide();
+            $("#slideshow img.image:not(:nth-of-type(" + (n) + "))").hide();
             console.log("here");
         });
 
     }
 }
 
+function next(n, callback) {
+	setTimeout(nextslide(n), 3000, function() {
+		callback();
+	});
+
+}
+
 function slideshow() {
-    var n = numOfImages;
+    var n = 100;
+    n = numOfImages;
     console.log(numOfImages);
     $("#slideshow img.image:not(:nth-of-type(" + n + "))").hide();
-    for (var i = n; i > 0; i--) {
-   		console.log(i);
-        (function(i) {
-        	setTimeout(nextslide(i), 3000);
-        })(i);
-    }
+    asyncLoop(numOfImages, function(loop){
+    	next(loop.iteration(), function(result) {
+    		console.log(loop.iteration());
+    		loop.next();
+    	})},
+    	function(){console.log('cycle ended')}
+    );
+    // for (var i = n; i > 0; i--) {
+   	// 	console.log(i);
+    //     (function(i) {
+    //     	setTimeout(nextslide(i), 3000);
+    //     })(i);
+    // }
 }
 
 function heightcenter() {
@@ -158,6 +173,8 @@ function initialize() {
     media();
 
     $(".layer span").addClass("heightcenter");
+    $(".layer a").addClass("heightcenter");
+
     $("ul.buton li span").addClass("heightcenter");
     $("ul.buton li a").addClass("heightcenter");
 
@@ -173,6 +190,8 @@ $(document).ready(function() {
     slideshow();
 
     $(".layer span").addClass("heightcenter");
+    $(".layer a").addClass("heightcenter");
+
     $("ul.buton li span").addClass("heightcenter");
     $("ul.buton li a").addClass("heightcenter");
 

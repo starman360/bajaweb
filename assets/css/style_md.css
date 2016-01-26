@@ -40,7 +40,7 @@ style_md.css
         padding-bottom: 0px;
     }
     #team {
-        max-height: 515px;
+        max-height: calc( 100% - 270px);
     }
     #description {}
     #people {
@@ -65,17 +65,41 @@ style_md.css
         top: 14px;
     }
     #team img {
-        max-height: 400px;
+        max-height: none;
+        /*width: 100%;*/
+        /*height: 400px;*/
     }
     #team ul.buton {
         position: relative;
-        top: -281.25px;
+        /*top: -281.25px;*/
+        top: -420.25px;
     }
     /*END TEAM*/
     /*START GALLERY*/
     ul.thumbnail li span {
         font-size: 5em;
         font-weight: bolder;
+    }
+    ul.thumbnail li a {
+        font-size: 5em;
+        font-weight: bolder;
+    }
+    #albums ul#gal {
+        padding-top: 80px;
+    }
+    #albums ul.album {
+        margin: 0px 52px;
+        padding: 0px 15px;
+        vertical-align: top;
+        padding-bottom: 40px;
+    }
+    #albums ul.album li:nth-of-type(1) {
+        height: 364px;
+        width: 364px;
+    }
+    #albums ul.album li:nth-of-type(2) {
+        width: 364px;
+        line-height: 1.3em;
     }
     /*END GALLERY*/
     /*START RESULTS*/
@@ -127,9 +151,15 @@ style_md.css
         padding-bottom: 40px;
     }
     #people ul.member li:nth-of-type(1) {
-        height: 364px;
-        width: 364px;
+        height: 409.5px;
+        width: 364px; 
     }
+
+    #people ul.member li:nth-of-type(1) img {
+        height: 400.5px;
+        width: 356px;
+    }
+
     #people ul.member li:nth-of-type(2) {
         width: 364px;
         line-height: 1.3em;
@@ -138,14 +168,6 @@ style_md.css
         line-height: 1.3em;
     }
     /*END PEOPLE*/
-    /*START SLIDESHOW*/
-    .image{
-        position: absolute;
-        width: 100%;
-        height: 100%;
-    }
-
-    /*END SLIDESHOW*/
     div.back {
         margin-bottom: 100px;
     }

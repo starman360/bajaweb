@@ -18,7 +18,7 @@ require($ASSET_PATH."/header.php");
 </div>
 <div id="team" class="page">
 	<h1>Team</h1>
-	<img src=" /assets/images/Rock_Crawl_2.jpg" alt="Imagine RIT">
+	<img src=" /assets/images/team.jpg" alt="Imagine RIT">
 	<ul class="buton">
 		<li><a href="e_board.php">executive board</a></li>
 		<li><a href="design_team.php">design team</a></li>
@@ -27,7 +27,7 @@ require($ASSET_PATH."/header.php");
 <div id="gallery" class="page">
 	<h1>Gallery</h1>
 	<ul class="thumbnail">
-		<li><div class="layer"><span>2015</span></div></li>
+		<li><div class="layer"><a href="/gallery/2015.php">2015</a></div></li>
 		<li><div class="layer"><span>2014</span></div></li>
 		<li><div class="layer"><span>2013</span></div></li>
 		<li><div class="layer"><span>2012</span></div></li>

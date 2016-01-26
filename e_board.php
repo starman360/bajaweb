@@ -12,22 +12,22 @@ require($ASSET_PATH."/header.php");
 <div id="people" class="page">
 	<ul id="teammembers">
 		<ul class="member">
-			<li class="portrait"></li>
+			<li class="portrait"><img src="/assets/images/headshots/headshot_doug.jpg" alt=""></li>
 			<li class="specific">Team Manager</li>
 			<li class="Name">Douglas Botto</li>
 		</ul>				
 		<ul class="member">
-			<li class="portrait"></li>
+			<li class="portrait"><img src="/assets/images/headshots/headshot_palmiter.jpg" alt=""></li>
 			<li class="specific">Project Manager</li>
 			<li class="Name">Daniel Palmiter</li>
 		</ul>
 		<ul class="member">
-			<li class="portrait"></li>
+			<li class="portrait"><img src="/assets/images/headshots/headshot_taylor.jpg" alt=""></li>
 			<li class="specific">Secretary</li>
 			<li class="Name">Taylor Clow</li>
 		</ul>	
 		<ul class="member">
-			<li class="portrait"></li>
+			<li class="portrait"><img src="/assets/images/headshots/headshot_ellory.jpg" alt=""></li>
 			<li class="specific">Treasurer</li>
 			<li class="Name">Ellory Lane</li>
 		</ul>
