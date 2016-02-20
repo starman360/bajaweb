@@ -83,9 +83,11 @@ require($ASSET_PATH."/header.php");
 		</ul>
 	</ul>
 </div>
-<div class="back">
+<div class="page">
+	<h1></h1>
 	<ul class="buton">
-		<li><a href="/">back to team</a></li>
+		<li><a href="/">Back</a></li>
 	</ul>
 </div>
+
 <?php require($ASSET_PATH."/footer.php");?>

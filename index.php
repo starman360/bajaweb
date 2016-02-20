@@ -18,7 +18,7 @@ require($ASSET_PATH."/header.php");
 </div>
 <div id="team" class="page">
 	<h1>Team</h1>
-	<img src=" /assets/images/team.jpg" alt="Imagine RIT">
+	<img src=" /assets/images/team_photo.jpg" alt="Imagine RIT">
 	<ul class="buton">
 		<li><a href="e_board.php">executive board</a></li>
 		<li><a href="design_team.php">design team</a></li>
@@ -28,22 +28,23 @@ require($ASSET_PATH."/header.php");
 	<h1>Gallery</h1>
 	<ul class="thumbnail">
 		<li><div class="layer"><a href="/gallery/2015.php">2015</a></div></li>
-		<li><div class="layer"><span>2014</span></div></li>
-		<li><div class="layer"><span>2013</span></div></li>
-		<li><div class="layer"><span>2012</span></div></li>
+		<li><div class="layer"><a href="/gallery/2014.php">2014</a></div></li>
+		<li><div class="layer"><a href="/gallery/2013.php">2013</a></div></li>
+		<!-- <li><div class="layer"><a href="/gallery/2012.php">2012</a></div></li> -->
 	</ul>
 </div>
 <div id="results" class="page"></div>
 <div id="sponsors" class="page">
 	<h1>Sponsors <br>& Donate</h1>
 	<ul class="buton">
-		<li><span id="sponsortoggle">Current Sponsors</span></li>
+		<li><a href="/sponsors.php">Sponsors</a></li>
+		<!-- <li><span id="sponsortoggle">Sponsors</span></li> -->
 		<li id="sponsorpage"></li>
 	</ul>
 	<p>Click below to learn more about becoming a sponsor of our team.</p>
 	<ul class="buton">
-		<li><span>Brochure</span></li>
-		<li><span>Proposal</span></li>
+		<li id="brochure"><a href="/assets/pdf/brochure.pdf" target="_blank">Brochure</a></li>
+		<li id="proposal"><a href="/assets/pdf/proposal.pdf" target="_blank">Proposal</a></li>
 	</ul>
 </div>
 <!-- Exit Wrapper -->

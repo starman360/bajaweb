@@ -144,7 +144,6 @@ nav {
 
 #wrapper {
     width: 100%;
-    box-shadow: 0px 0px 40px #888888;
     /*height: 3000px;*/
 }
 
@@ -198,6 +197,8 @@ div.page:nth-of-type(2n) {
 }
 
 #media {
+    position: fixed;
+    bottom: 0px;
     background-color: black;
     height: 45px;
 }
@@ -209,12 +210,20 @@ div.page:nth-of-type(2n) {
     width: 100%;
 }
 
+#eboard,
 #designteam {
     /*height: 522px;*/
     height: 277px;
-    background-image: url(/assets/images/Team.jpg);
     background-size: 100% auto;
     background-repeat: no-repeat;
+}
+
+#designteam {
+    background-image: url(/assets/images/Team.jpg);
+}
+
+#eboard {
+    background-image: url(/assets/images/eboard.jpg);
 }
 
 #people {
@@ -261,7 +270,7 @@ ul.buton li {
 
 ul.buton li a {
     text-decoration: none;
-    /*display: block;*/
+    display: block;
     color: white;
     font-weight: bold;
 }
@@ -277,7 +286,7 @@ ul.buton li span:last-of-type {
 }
 
 ul.buton li span.glyphicon {
-    left: -75px;
+    left: -50px;
 }
 
 ul.buton li:hover {
@@ -368,6 +377,12 @@ ul.thumbnail li:hover {
     list-style-type: none;
 }
 
+#albums ul.album li a img {
+    width: 100%;
+    height: 100%;
+    /*opacity: 0.5; */
+}
+
 #albums ul.album li:nth-of-type(1) {
     border: 4px solid #f47a1f;
     height: 184px;
@@ -415,6 +430,44 @@ ul.thumbnail li:hover {
     display: none;
 }
 
+#results div.page {
+    margin-top: 5px;
+}
+
+#results ul.season {
+    width: 100%;
+    display: inline-block;
+    list-style-type: none;
+    text-align: center;
+    padding-left: 0;
+    padding-right: 0;
+}
+
+#results ul.race {
+    max-width: 100%;
+    list-style-type: none;
+    padding-left: 0;
+    padding-right: 0;
+}
+
+#results ul.season ul.race li.racetitle {
+    position: relative;
+    margin: 0 auto;
+    display: block;
+    list-style-type: none;
+    width: 95%;
+    background-color: #f47a1f;
+    font-size: 1.6em;
+    font-weight: bold;
+    text-align: center;
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
+}
+
+#results ul.season ul.race li:last-of-type {
+    margin-bottom: 10px;
+}
+
 
 /*END RESULTS*/
 
@@ -423,12 +476,50 @@ ul.thumbnail li:hover {
 
 #sponsorpage {
     background-image: url(/assets/images/sponsorspage.png);
-    background-size: 100% auto;
+    background-size: 50% auto;
     background-color: black;
     display: none;
 }
 
+#sponsor {}
 
+#sponsor p {
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
+    padding: 7px 15px;
+}
+
+#sponsor img#platinum_sponsor {
+    height: auto;
+    /*background: url(/assets/images/sponsors/m_platinum.png);*/
+    background-repeat: no-repeat;
+}
+
+#sponsor img#gold_sponsor {
+    background-image: 100% 50px;
+    /*background: url(/assets/images/sponsors/m_gold.png);*/
+    background-repeat: no-repeat;
+    background-position: cover;
+}
+
+#sponsor img#silver_sponsor {
+    background-image: 100% 50px;
+    /*background: url(/assets/images/sponsors/m_silver.png);*/
+    background-repeat: no-repeat;
+    background-position: cover;
+}
+
+#sponsor img#bronze_sponsor {
+    background-image: 100% 50px;
+    /*background: url(/assets/images/sponsors/m_silver.png);*/
+    background-repeat: no-repeat;
+    background-position: cover;
+}
+
+#proposal,
+#brochure {
+    background-color: #666666;
+}
 /*END SPONSORS*/
 
 

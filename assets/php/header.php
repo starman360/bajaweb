@@ -1,6 +1,7 @@
 <?php
 // header.php
 $ASSET_PATH = $_SERVER['DOCUMENT_ROOT']."/assets/php";
+$_SESSION['numOfImages'] = 0;
 ?>
 <html lang="en">
     <head>

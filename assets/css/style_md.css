@@ -12,6 +12,16 @@ style_md.css
         max-width: 1000px;
         margin: 0 auto;
     }
+    body {
+        background: url(/assets/images/back.jpg) no-repeat center center fixed;
+        background-size: cover;
+    }
+    #wrapper {
+        padding-bottom: 70px;
+        box-shadow: 0px 0px 40px #888888;
+        background-color: white;
+        /*height: 2000px;*/
+    }
     /*START NAV*/
     .nav {
         margin: 20px auto;
@@ -40,7 +50,8 @@ style_md.css
         padding-bottom: 0px;
     }
     #team {
-        max-height: calc( 100% - 270px);
+        /*max-height: calc( 100% - 270px);*/
+        /*height: 800;*/
     }
     #description {}
     #people {
@@ -50,19 +61,22 @@ style_md.css
     /*START MAIN*/
     /*END MAIN*/
     /*START TEAM*/
-    ul.buton li {
+    ul.buton > li {
         margin: 0 auto;
         margin-bottom: 12.5px;
         width: 500px;
         height: 80px;
     }
-    ul.buton li span:last-of-type {
+    ul.buton > li span:last-of-type {
         font-size: 37.1px;
         top: 14px;
     }
-    ul.buton li a {
+    ul.buton > li a {
         font-size: 37.1px;
         top: 14px;
+    }
+    ul.buton > div.page {
+        clear: both;
     }
     #team img {
         max-height: none;
@@ -73,6 +87,11 @@ style_md.css
         position: relative;
         /*top: -281.25px;*/
         top: -420.25px;
+    }
+
+    #designteam,
+    #eboard {
+        height: 600px;
     }
     /*END TEAM*/
     /*START GALLERY*/
@@ -101,9 +120,15 @@ style_md.css
         width: 364px;
         line-height: 1.3em;
     }
+    .image {
+        position: absolute;
+        width: 952px;
+        top: 204px;
+        /*max-height: 500px;*/
+    }
     /*END GALLERY*/
     /*START RESULTS*/
-    #results ul.buton li {
+    #results ul.buton > li {
         width: 483px;
         height: 78px;
         display: inline-block;
@@ -111,11 +136,11 @@ style_md.css
     }
     #results ul.buton li.detail {
         width: 986px;
-        height: 268px;
+        height: 600px;
         background-color: white;
         display: none;
     }
-    #results ul.buton li.detail:hover {
+    #results ul.buton li.detail li:hover {
         box-shadow: none;
     }
     #results ul.buton ul.buton {
@@ -124,8 +149,52 @@ style_md.css
     #results ul.buton li span:first-of-type {
         display: none;
     }
+    #results ul.buton ul.season {
+        background-color: transparent;
+    }
+    #results ul.buton ul.season li {
+        background-color: transparent;
+    }
+    #results div.page {
+        margin-top: 5px;
+    }
+    #results ul.season {
+        width: 100%;
+        display: inline-block;
+        list-style-type: none;
+        text-align: center;
+        padding-left: 0;
+    }
+    #results ul.race {
+        /*width: 100%;*/
+        list-style-type: none;
+        padding-left: 0;
+    }
+    #results ul.season ul.race li.racetitle {
+        position: relative;
+        margin: 0 auto;
+        display: block;
+        list-style-type: none;
+        width: 95%;
+        font-size: 1em;
+        font-weight: bold;
+        text-align: center;
+        border-top: 2px solid black;
+        border-bottom: 2px solid black;
+    }
+    #results ul.season ul.race li.award {
+        font-size: 0.75em;
+        height: auto;
+        width: auto;
+    }
+    #results ul.season ul.race li:last-of-type {
+        margin-bottom: 10px;
+    }
     /*END RESULTS*/
     /*START MEDIA*/
+    #media {
+        width: 1000px;
+    }
     /*END MEDIA*/
     /*START SPONS*/
     #spons {
@@ -152,14 +221,12 @@ style_md.css
     }
     #people ul.member li:nth-of-type(1) {
         height: 409.5px;
-        width: 364px; 
+        width: 364px;
     }
-
     #people ul.member li:nth-of-type(1) img {
         height: 400.5px;
         width: 356px;
     }
-
     #people ul.member li:nth-of-type(2) {
         width: 364px;
         line-height: 1.3em;

@@ -1,36 +1,31 @@
 <?php 
 $ASSET_PATH = $_SERVER['DOCUMENT_ROOT']."/assets/php";
 require($ASSET_PATH."/header.php");
+$year = 2015;
+$race = array("Auburn", "Maryland", "Oregon");
 ?>
 
 <h1></h1>
 <h1></h1>
-<h1>2015 GALLERY</h1>
+<h1><?php echo $year ?> GALLERY</h1>
 
 <div id="albums" class="page">
 	<ul id="gal">
-		<ul class="album">
-			<li class="albumcover"></li>
-			<li class="albumtitle">Build season</li>
-		</ul>
-		<ul class="album">
-			<li class="albumcover"></li>
-			<li class="albumtitle">Auburn race</li>
-		</ul>
-		<ul class="album">
-			<li class="albumcover"></li>
-			<li class="albumtitle">maryland race</li>
-		</ul>
-		<ul class="album">
-			<li class="albumcover"></li>
-			<li class="albumtitle">oregon race</li>
-		</ul>
+		<?php 
+			$numOfRaces = sizeof($race);
+			for ($i=0; $i < $numOfRaces; $i++) {
+				echo '<ul class="album">
+					<li class="albumcover"><a href="/gallery/'.$year.'/gallery.php?race='.$race[$i].'"><img src="/gallery/'.$year.'/'.$race[$i].'_thumb.jpg" alt=""></a></li>
+					<li class="albumtitle">'.$race[$i].'</li>
+				</ul>';
+			}
+		?>
 	</ul>
 </div>
 <div class="page">
 	<h1></h1>
 	<ul class="buton">
-		<li><span>back</span></li>
+		<li><a href="/">Back to Gallary</a></li>
 	</ul>
 </div>
 

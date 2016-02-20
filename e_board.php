@@ -3,7 +3,7 @@ $ASSET_PATH = $_SERVER['DOCUMENT_ROOT']."/assets/php";
 $result = 0;
 require($ASSET_PATH."/header.php");
 ?>
-<div id="designteam" class="page">
+<div id="eboard" class="page">
 	<h1>Executive Board</h1>
 </div>
 <div id="description" class="page">
@@ -33,9 +33,10 @@ require($ASSET_PATH."/header.php");
 		</ul>
 	</ul>
 </div>
-<div class="back">
+<div class="page">
+	<h1></h1>
 	<ul class="buton">
-		<li><a href="/">back to team</a></li>
+		<li><a href="/">Back</a></li>
 	</ul>
 </div>
 <?php require($ASSET_PATH."/footer.php");?>
